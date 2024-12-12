@@ -11,7 +11,7 @@ const services = [
     <!-- Hero Section -->
     <v-row class="mb-10 align-center">
       <v-col cols="12" md="6">
-        <h1>Welcome to HVAC Company</h1>
+        <h1 id="mavFont">Welcome to HVAC Company</h1>
         <p>Providing reliable heating and air conditioning services for your home or business.</p>
         <v-btn color="primary" to="/services" tag="RouterLink">Explore Our Services</v-btn>
       </v-col>
@@ -24,7 +24,8 @@ const services = [
     <v-row class="mb-10">
       <v-col cols="12" md="6">
         <h2>About Us</h2>
-        <p>With years of experience, we are dedicated to providing top-notch heating, cooling, and air quality solutions.</p>
+        <p>With years of experience, we are dedicated to providing top-notch heating, cooling, and air quality
+          solutions.</p>
       </v-col>
       <v-col cols="12" md="6">
         <!-- <img src="/path/to/about-us-image.jpg" alt="Our team" class="img-fluid"> -->
@@ -57,9 +58,11 @@ const services = [
 </template>
 
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   color: var(--v-theme-primary);
 }
+
 .img-fluid {
   max-width: 100%;
   border-radius: 8px;

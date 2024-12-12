@@ -1,11 +1,14 @@
-import { createApp } from 'vue';
-import { createVuetify } from 'vuetify';
-import router from './router';
-import App from './App.vue';
+//  note: all global imports here, mainly for dependencies or files in dir
 
-const vuetify = createVuetify();
+import './assets/main.css'
 
-createApp(App)
-  .use(router)
-  .use(vuetify)
-  .mount('#app');
+import { createApp } from 'vue'
+// import { createVuetify } from 'vuetify' dont' do
+
+import App from './App.vue'
+import router from './router'
+import vuetify from '../plugins/vuetify.js'
+
+// const vuetify = createVuetify() don't do
+
+createApp(App).use(router).use(vuetify).mount('#app')
