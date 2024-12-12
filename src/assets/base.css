@@ -1,0 +1,209 @@
+/* Color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(255, 255, 255, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(244, 238, 238, 0.64);
+
+  /* Semantic colors */
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black-soft);
+    --color-background-soft: var(--vt-c-black-mute);
+    --color-background-mute: var(--vt-c-black);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.8;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
+}
+
+/* Main application container */
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--color-background-soft);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--vt-c-indigo);
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  color: var(--vt-c-indigo);
+  border-bottom: 2px solid var(--vt-c-indigo);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--vt-c-indigo);
+  color: var(--vt-c-white);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav a {
+  margin-left: 1.5rem;
+  color: var(--vt-c-white);
+}
+
+header nav a:hover {
+  color: var(--vt-c-white-soft);
+}
+
+/* Content Section */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--vt-c-indigo);
+  color: var(--vt-c-white);
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--vt-c-white);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+/* Grid Layout */
+@media (min-width: 1024px) {
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    background: var(--color-background-mute);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-heading);
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar ul li a {
+    color: var(--vt-c-indigo);
+    font-weight: bold;
+  }
+
+  .sidebar ul li a:hover {
+    color: var(--vt-c-indigo);
+  }
+}
