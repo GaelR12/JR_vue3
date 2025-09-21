@@ -17,6 +17,7 @@ import { mdiFire } from '@mdi/js'
 import { mdiFireExtinguisher } from '@mdi/js'
 import { mdiLinkVariant } from '@mdi/js'
 
+
 // Vuetify
 import 'vuetify/styles'
 import * as components from 'vuetify/components'

@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { srCyrl } from 'vuetify/locale';
 import AppBar from './components/layout/AppBar.vue';
 import FooterBar from './components/layout/FooterBar.vue';
 </script>
+
+
 
 <template>
   <v-app>
@@ -13,7 +16,7 @@ import FooterBar from './components/layout/FooterBar.vue';
 
         <!-- Content Area -->
         <v-row class="my-5">
-          <v-col cols="12" md="8" offset-md="2">
+          <v-col cols="10" md="0" offset-md="0">
             <router-view />
           </v-col>
         </v-row>
@@ -32,31 +35,38 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  /* text-align: left;3 */
 }
 
 .v-application {
   background-color: #ffffff; /* Set background color to white */
   min-height: 100vh;
+  
 }
 
 .v-main {
   padding: 20px 0;
+  text-align: left;
 }
 
 /* AppBar and Footer styling */
-.AppBar {
-  background-color: #1976D2; /* Blue color for header */
-  color: white;
+/* Make AppBar light blue transparent */
+::v-deep(.v-app-bar) {
+  background-color: rgba(224, 223, 255, 0.7) !important; /* light blue + transparency */
+  color: black !important;
+  box-shadow: none; /* removes shadow */
 }
 
-.FooterBar {
-  background-color: #1976D2; /* Blue color for footer */
-  color: white;
-  padding: 10px 0;
+/* Make FooterBar light blue transparent */
+::v-deep(.v-footer) {
+  background-color:rgba(224, 223, 255, 0.7) !important;
+  color: black !important;
+  box-shadow: none;
 }
 
 .v-container {
   margin-top: 30px;
+
 }
 
 .v-row {
@@ -97,5 +107,4 @@ v-main {
 .v-btn:hover {
   background-color: #1565c0;
 }
-
 </style>

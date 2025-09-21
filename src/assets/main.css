@@ -18,6 +18,10 @@ how: host font file in imagekit
  use: in element place id="mavFont"
  */
 #mavFont {
-  font-family: 'maveric', 'Times New Roman', sans-serif !important;
+  /* (use this as default) font-family: 'maveric', 'Times New Roman', sans-serif !important;
+   */
+   /* font-family: 'Nunito Sans', 'Segoe UI', sans-serif !important;
+    */
+  font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
   /* font props can be added here */
 }
