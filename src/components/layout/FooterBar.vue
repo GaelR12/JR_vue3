@@ -26,4 +26,11 @@ export default defineComponent({
   padding: 16px;
   font-size: 0.9rem;
 }
+
+.v-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 </style>

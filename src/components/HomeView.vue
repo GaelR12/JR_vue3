@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import slide1 from "/Users/gaelrueda/Desktop/HVAC2/JR_vue3/src/assets/images/JR03.jpg";
-import slide2 from "/src/assets/images/air-conditioner-global-warming-summer-science-technology-8010ce-1024.jpg";
-import slide3 from "/src/assets/images/JR01.jpg";
+import slide1 from "@/assets/images/JR03.jpg"; 
+import slide2 from "@/assets/images/air-conditioner-global-warming-summer-science-technology-8010ce-1024.jpg";
+import slide3 from "@/assets/images/JR01.jpg";
 import { describe } from "node:test";
 
 const services = [
@@ -14,13 +14,11 @@ const services = [
   { title: 'Residential Services', description: 'Providing Your Family with Home Comfort Solutions.'},
 ];
 
-
 const images = ref([slide1, slide2,slide3]);
 
 </script>
 
 <template>
-
   <v-carousel
         hide-delimiter-background
         show-arrows="hover"
@@ -39,6 +37,7 @@ const images = ref([slide1, slide2,slide3]);
         </v-carousel-item>
       </v-carousel>
   <v-container>
+
     <!-- Hero Section -->
     <v-row class="mb-10 align-center">
       <v-col cols="12" md="6">
