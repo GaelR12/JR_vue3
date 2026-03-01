@@ -2,6 +2,9 @@
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
+import { mdiFacebook } from '@mdi/js'
+
+
 // Import Icons Here
 import { mdiTorch } from '@mdi/js'
 import { mdiSignDirection } from '@mdi/js'
@@ -16,6 +19,7 @@ import { mdiCloseBoxMultipleOutline } from '@mdi/js'
 import { mdiFire } from '@mdi/js'
 import { mdiFireExtinguisher } from '@mdi/js'
 import { mdiLinkVariant } from '@mdi/js'
+
 
 
 // Vuetify
@@ -58,6 +62,7 @@ export default createVuetify({
       EX: icon="$Plus" */
     aliases: {
       ...aliases,
+      Facebook: mdiFacebook,
       Torch: mdiTorch,
       SignDirection: mdiSignDirection,
       MapCheckOutline: mdiMapCheckOutline,
